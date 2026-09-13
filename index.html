@@ -3,158 +3,275 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔐 Privacy Policy - Zimowy Guard</title>
-
+<title>Privacy Policy — Zimowy Guard</title>
 <style>
-body{
-    margin:0;
-    padding:40px;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0d1117;
-    color:#e6edf3;
-    line-height:1.7;
-}
+  :root {
+    --bg: #0d0f14;
+    --card: #1a1d24;
+    --card-border: #2a2e38;
+    --accent: #5b9dff;
+    --accent-soft: #5b9dff22;
+    --text: #e6e8ec;
+    --text-dim: #9aa1ac;
+    --text-dimmer: #6b7280;
+    --green: #57c785;
+    --red: #e06c75;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(circle at 50% 0%, #161a22 0%, var(--bg) 55%);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    padding: 40px 20px 100px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    background:#161b22;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,.35);
-}
+  .nav {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .nav a:hover { text-decoration: underline; }
 
-nav{
-    text-align:center;
-    margin-bottom:25px;
-}
+  .doc-header { text-align: center; margin-bottom: 36px; }
+  .doc-header .icon { font-size: 42px; }
+  .doc-header h1 {
+    font-size: 32px;
+    margin: 8px 0 18px;
+    background: linear-gradient(90deg, #6fa8ff, #a68fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .meta { font-size: 14px; color: var(--text-dim); margin: 4px 0; }
+  .meta b { color: var(--text); }
 
-nav a{
-    color:#58a6ff;
-    margin:0 10px;
-    text-decoration:none;
-    font-weight:bold;
-}
+  .intro-box {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 24px 0 40px;
+    color: #cfd6e3;
+    font-size: 15px;
+  }
 
-nav a:hover{
-    text-decoration:underline;
-}
+  section { margin-bottom: 44px; }
+  h2 {
+    font-size: 22px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h3 { font-size: 17px; color: var(--text); margin: 22px 0 8px; }
 
-h1{ text-align:center; color:#58a6ff; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
 
-h2{
-    margin-top:35px;
-    color:#79c0ff;
-    border-bottom:1px solid #30363d;
-    padding-bottom:8px;
-}
+  ul.plain { list-style: none; padding: 0; margin: 0; }
+  ul.plain li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--card-border);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+  ul.plain li:last-child { border-bottom: none; }
+  ul.plain .emoji { flex-shrink: 0; }
 
-p,li{ color:#c9d1d9; }
+  .note { font-size: 13.5px; color: var(--text-dimmer); margin-top: 14px; line-height: 1.6; }
+  .badge-yes { color: var(--green); font-weight: 600; }
+  .badge-no { color: var(--red); font-weight: 600; }
 
-ul{ padding-left:25px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 8px; }
+  table th, table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--card-border); }
+  table th { color: var(--text-dim); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .03em; }
 
-.card{
-    background:#21262d;
-    border-left:4px solid #58a6ff;
-    padding:15px;
-    margin-top:15px;
-    border-radius:8px;
-}
-
-.footer{
-    margin-top:50px;
-    text-align:center;
-    font-size:13px;
-    color:#8b949e;
-}
+  footer { text-align: center; color: var(--text-dimmer); font-size: 13px; margin-top: 60px; }
+  a.inline { color: var(--accent); }
+  p.desc { margin: 0; font-size: 14.5px; color: var(--text-dim); }
 </style>
 </head>
-
 <body>
+<div class="wrap">
 
-<div class="container">
+  <div class="nav">
+    <a href="index.html">🔒 Privacy Policy</a>
+    <a href="terms-of-service.html">📄 Terms of Service</a>
+  </div>
 
-<nav>
-<a href="index.html">🔐 Privacy Policy</a>
-<a href="tos.html">📄 Terms of Service</a>
-</nav>
+  <div class="doc-header">
+    <div class="icon">🔐</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">🤖 <b>Bot:</b> Zimowy Guard</div>
+    <div class="meta">📅 <b>Effective Date:</b> July 8, 2026</div>
+    <div class="meta">🔄 <b>Last Revised:</b> September 13, 2026</div>
+  </div>
 
-<h1>🔐 Privacy Policy</h1>
+  <div class="intro-box">
+    This Privacy Policy explains what data Zimowy Guard processes on Discord servers, why it is processed, and how long it is retained. Zimowy Guard combines a member engagement toolkit (verification, riddles/quizzes, color roles, reputation, activity leaderboard) with a server protection toolkit (moderation logging, anti-raid, anti-nuke, and blacklist systems).
+  </div>
 
-<p><strong>🤖 Bot:</strong> Zimowy Guard</p>
-<p><strong>📅 Effective Date:</strong> July 1, 2026</p>
+  <section>
+    <h2>📋 Data We Collect</h2>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji">👤</span> User IDs</li>
+        <li><span class="emoji">🏠</span> Server (Guild) IDs</li>
+        <li><span class="emoji">💬</span> Channel IDs where activity or moderation actions take place</li>
+        <li><span class="emoji">🎭</span> Role IDs (used for permission checks, member verification, self-assigned color roles, and role snapshots used to restore roles after a leave/vacation period)</li>
+        <li><span class="emoji">🧩</span> Riddle/quiz identifiers and the answer option a user selects (A/B/C/D)</li>
+        <li><span class="emoji">📨</span> Message IDs of riddle/quiz posts (used to update the vote count shown in the embed)</li>
+        <li><span class="emoji">🖱️</span> Interaction data (which button or select menu a user clicked, and when)</li>
+        <li><span class="emoji">⭐</span> Reputation point totals, given between users via a text command in a designated channel</li>
+        <li><span class="emoji">📈</span> A daily message count per user, used only to generate a "most active members" leaderboard</li>
+        <li><span class="emoji">🛡️</span> Moderation statistics per staff member (message count, kicks, bans, warns, mutes, deleted-message count, tracked voice time, ticket count, staff rating, and how long someone has held a staff role)</li>
+        <li><span class="emoji">📜</span> A history log of moderation actions (action type, reason, timestamp, and which staff member performed it)</li>
+        <li><span class="emoji">🚨</span> Security-related event data used for anti-raid and anti-nuke protection: timestamps of member joins during a suspected raid, timestamps and types of suspicious admin-level actions (e.g. mass channel/role changes), and temporary records of original server/nickname values changed during an incident (so they can be restored)</li>
+        <li><span class="emoji">🧳</span> Vacation/leave-mode data: which roles a user had before going on leave and when their leave period ends, so roles can be automatically restored</li>
+        <li><span class="emoji">⛔</span> Blacklist records for servers or users found to violate the rules (server/user ID, reason, note, and which staff member added the entry)</li>
+      </ul>
+      <div class="note">
+        The bot does <b>not</b> use the <b>Presence Intent</b> (online/offline status of other users). The bot does use the <b>Message Content Intent</b>, but only to recognize specific text patterns in real time and to run automated spam/security checks (see below) — the text of ordinary messages is never stored, logged, or reviewed by anyone. Interactions (buttons, select menus, slash commands) are processed directly through Discord's interaction system, not by scanning message content.
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-This Privacy Policy explains how the bot processes Discord data.
+  <section>
+    <h2>💬 Use of Message Content</h2>
+    <div class="card">
+      <p class="desc" style="margin-bottom:10px;">Message text is read in real time, in memory only, for the following purposes:</p>
+      <ul class="plain">
+        <li><span class="emoji">➕</span> Recognizing the <code>+rep @user</code> and <code>?rep @user</code> text commands, used to give and check reputation points in a single designated channel</li>
+        <li><span class="emoji">🔗</span> Detecting links posted in specific configured channels, so the bot can keep a pinned informational embed visible at the bottom of the channel</li>
+        <li><span class="emoji">🛠️</span> Recognizing a small set of plain-text maintenance commands, restricted to a few trusted, hardcoded staff user IDs</li>
+        <li><span class="emoji">🚫</span> Automated anti-spam detection, which briefly checks the rate and similarity of recent messages from an account to identify spam/flood behavior</li>
+      </ul>
+      <div class="note">No message content is saved to our database. Only the outcome of this processing — a point total, a numeric daily message count, a security flag, or an action taken — is stored, always keyed by Discord user ID.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>⚙️ Why We Process This Data</h2>
+    <div class="card">
+      <table>
+        <tr><th>Purpose</th><th>Data Used</th></tr>
+        <tr><td>Member verification (assigning the verified role)</td><td>User ID, Role ID</td></tr>
+        <tr><td>Permission-gated slash commands</td><td>User ID, Channel ID, Role/permission data</td></tr>
+        <tr><td>Riddle / quiz voting system</td><td>User ID, riddle ID, selected answer, message ID (to keep the live vote tally accurate and prevent double voting)</td></tr>
+        <tr><td>Self-assigned color roles</td><td>User ID, Role ID</td></tr>
+        <tr><td>Reputation system (<code>+rep</code> / <code>?rep</code>)</td><td>User ID, cumulative point total</td></tr>
+        <tr><td>Daily activity leaderboard</td><td>User ID, daily message count</td></tr>
+        <tr><td>Vacation / leave mode</td><td>User ID, Guild ID, saved role list, end date, hidden channel state</td></tr>
+        <tr><td>Staff moderation statistics &amp; history</td><td>Staff User ID, action counts, action log entries, timestamps</td></tr>
+        <tr><td>Anti-raid protection (mass-join detection, temporary lockdown)</td><td>Join timestamps, Guild ID</td></tr>
+        <tr><td>Anti-nuke protection (detecting and reversing destructive admin actions)</td><td>User ID, action type, timestamp, restored role/name data</td></tr>
+        <tr><td>Anti-spam protection</td><td>User ID, message timing (content is not retained)</td></tr>
+        <tr><td>Server / user blacklist</td><td>Server or User ID, reason, note, staff ID who added the entry</td></tr>
+        <tr><td>Command registration and updates</td><td>Guild ID (used only to register/update slash commands on the server)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>🗄️ Data Storage &amp; Retention</h2>
+    <div class="card">
+      <p class="desc" style="margin-bottom:10px;">All data is stored locally in a SQLite database on the bot's own hosting server. Nothing is sent to or stored by any third party.</p>
+      <table>
+        <tr><th>Data</th><th>Retention</th></tr>
+        <tr><td>Riddle/quiz votes</td><td>Deleted once the riddle is closed and results are announced</td></tr>
+        <tr><td>Daily activity message counts</td><td>Reset and cleared every 24 hours after the leaderboard is posted</td></tr>
+        <tr><td>Reputation point totals</td><td>Kept indefinitely as a persistent, cumulative server feature (similar to a level or points system), until deletion is requested</td></tr>
+        <tr><td>Role/verification data</td><td>Kept for as long as the user is a member of the server, until deletion is requested</td></tr>
+        <tr><td>Vacation/leave role snapshots</td><td>Kept only until the leave period ends (or the user leaves the server), then deleted</td></tr>
+        <tr><td>Anti-raid join timestamps / lockdown state</td><td>Short-lived; cleared once the raid window passes or the lockdown is lifted</td></tr>
+        <tr><td>Anti-nuke action records &amp; restored name/role snapshots</td><td>Kept temporarily to allow restoration after an incident, then expire automatically</td></tr>
+        <tr><td>Staff moderation statistics &amp; action history</td><td>Kept indefinitely as an internal accountability record, until deletion is requested</td></tr>
+        <tr><td>Server / user blacklist entries</td><td>Kept indefinitely for server-safety purposes, until removed by staff</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>🤝 Data Sharing</h2>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji"><span class="badge-no">✗</span></span> Data is never sold or shared with third parties</li>
+        <li><span class="emoji"><span class="badge-no">✗</span></span> Data is never used for advertising purposes outside the server</li>
+        <li><span class="emoji"><span class="badge-yes">✓</span></span> Aggregated vote counts, reputation totals, and the activity leaderboard are visible to server members, as they are shown publicly in embeds (raw message content is never disclosed or displayed)</li>
+        <li><span class="emoji"><span class="badge-yes">✓</span></span> Moderation logs, staff statistics, and blacklist entries are visible only to server staff with the appropriate permissions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔒 Data Security</h2>
+    <div class="card">
+      <p class="desc">Bot credentials, including the Discord bot token, are stored securely using environment variables and are never hardcoded, exposed publicly, or shared.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>👶 Children</h2>
+    <div class="card">
+      <p class="desc">
+        The bot is intended to be used in accordance with <a class="inline" href="https://discord.com/terms" target="_blank" rel="noopener">Discord's Terms of Service</a>, which require users to be at least 13 years old (or the minimum age required in their country). We do not knowingly collect data from users below this age.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>✋ Your Rights</h2>
+    <div class="card">
+      <p class="desc">
+        You may request deletion of your data (reputation points, activity counts, recorded votes, role/verification data, vacation records, or moderation-related data tied to your account) at any time by opening a ticket in the <b>#ticket</b> channel on our Discord server. Requests are reviewed by staff and your data is deleted upon verification of your Discord user ID, except where retaining a moderation record is reasonably necessary for server safety and accountability. You may also stop using the bot's features at any time.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>✏️ Changes to This Policy</h2>
+    <div class="card">
+      <p class="desc">
+        We may update this Privacy Policy from time to time. Significant changes will be announced on the server. Continued use of the bot after changes take effect constitutes acceptance of those changes.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>✉️ Contact</h2>
+    <div class="card">
+      <p class="desc">
+        For any questions regarding privacy or data handling, please contact server staff through the ticket system.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Zimowy Guard — Discord Bot &nbsp;•&nbsp; Last updated: September 13, 2026
+  </footer>
+
 </div>
-
-<h2>🧾 Data Collection</h2>
-<ul>
-<li>👤 User IDs</li>
-<li>🏠 Server IDs</li>
-<li>💬 Channel IDs</li>
-<li>🎭 Role IDs</li>
-<li>📨 Message IDs (if needed)</li>
-</ul>
-
-<h2>⚙️ Usage</h2>
-<ul>
-<li>🛡️ Moderation</li>
-<li>🚨 Anti-raid / Anti-nuke</li>
-<li>🤖 Automation</li>
-<li>📊 Statistics</li>
-</ul>
-
-<div class="footer">
-© 2026 Zimowy Asystent
-</div>
-
-</div>
-
-</body>
-</html><p>Message content is processed only when required for commands or moderation actions.</p>
-
-<p>It is not permanently stored unless explicitly required for logging or security purposes.</p>
-
-<h2>4. Data Storage</h2>
-
-<p>Data is stored locally using SQLite or similar lightweight databases and is accessible only to the bot owner.</p>
-
-<h2>5. Data Security</h2>
-
-<p>Bot credentials, including the Discord bot token, are stored securely using environment variables and are never exposed publicly.</p>
-
-<div class="card">
-No sensitive credentials are hardcoded or shared.
-</div>
-
-<h2>6. Data Sharing</h2>
-
-<p>No data is sold, shared, or transferred to third parties.</p>
-
-<h2>7. Data Retention & Deletion</h2>
-
-<p>Data is stored only as long as necessary for functionality.</p>
-
-<p>Users may request deletion of their data at any time via Discord contact.</p>
-
-<h2>8. User Rights</h2>
-
-<p>Users may request information about stored data or request its removal when applicable.</p>
-
-<h2>9. Changes</h2>
-
-<p>This Privacy Policy may be updated at any time. Continued use of the Bot constitutes acceptance of changes.</p>
-
-<h2>10. Contact</h2>
-
-<p>Contact the developer via Discord for any privacy-related questions.</p>
-
-<div class="footer">
-© 2026 Zimowy Guard • All rights reserved
-</div>
-
-</div>
-
 </body>
 </html>

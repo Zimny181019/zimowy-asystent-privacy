@@ -3,108 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📄 Terms of Service - Zimowy Guard</title>
-
+<title>Terms of Service — Zimowy Guard</title>
 <style>
-body{
-    margin:0;
-    padding:40px;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0d1117;
-    color:#e6edf3;
-    line-height:1.7;
-}
+  :root {
+    --bg: #0d0f14;
+    --card: #1a1d24;
+    --card-border: #2a2e38;
+    --accent: #5b9dff;
+    --accent-soft: #5b9dff22;
+    --text: #e6e8ec;
+    --text-dim: #9aa1ac;
+    --text-dimmer: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(circle at 50% 0%, #161a22 0%, var(--bg) 55%);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    padding: 40px 20px 100px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    background:#161b22;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,.35);
-}
+  .nav {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .nav a:hover { text-decoration: underline; }
 
-nav{
-    text-align:center;
-    margin-bottom:25px;
-}
+  .doc-header { text-align: center; margin-bottom: 36px; }
+  .doc-header .icon { font-size: 42px; }
+  .doc-header h1 {
+    font-size: 32px;
+    margin: 8px 0 18px;
+    background: linear-gradient(90deg, #6fa8ff, #a68fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .meta { font-size: 14px; color: var(--text-dim); margin: 4px 0; }
+  .meta b { color: var(--text); }
 
-nav a{
-    color:#58a6ff;
-    margin:0 10px;
-    text-decoration:none;
-    font-weight:bold;
-}
+  .intro-box {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 24px 0 40px;
+    color: #cfd6e3;
+    font-size: 15px;
+  }
 
-nav a:hover{
-    text-decoration:underline;
-}
+  section { margin-bottom: 44px; }
+  h2 {
+    font-size: 22px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-h1{ text-align:center; color:#58a6ff; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
 
-h2{
-    margin-top:35px;
-    color:#79c0ff;
-    border-bottom:1px solid #30363d;
-    padding-bottom:8px;
-}
+  ul.plain { list-style: none; padding: 0; margin: 0; }
+  ul.plain li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--card-border);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+  ul.plain li:last-child { border-bottom: none; }
+  ul.plain .emoji { flex-shrink: 0; }
 
-p,li{ color:#c9d1d9; }
+  .note { font-size: 13.5px; color: var(--text-dimmer); margin-top: 14px; line-height: 1.6; }
+  p.desc { margin: 0; font-size: 14.5px; color: var(--text-dim); }
 
-ul{ padding-left:25px; }
-
-.footer{
-    margin-top:50px;
-    text-align:center;
-    font-size:13px;
-    color:#8b949e;
-}
+  footer { text-align: center; color: var(--text-dimmer); font-size: 13px; margin-top: 60px; }
 </style>
 </head>
-
 <body>
+<div class="wrap">
 
-<div class="container">
+  <div class="nav">
+    <a href="index.html">🔒 Privacy Policy</a>
+    <a href="terms-of-service.html">📄 Terms of Service</a>
+  </div>
 
-<nav>
-<a href="index.html">🔐 Privacy Policy</a>
-<a href="tos.html">📄 Terms of Service</a>
-</nav>
+  <div class="doc-header">
+    <div class="icon">📄</div>
+    <h1>Terms of Service</h1>
+    <div class="meta">🤖 <b>Bot:</b> Zimowy Guard</div>
+    <div class="meta">📅 <b>Effective Date:</b> July 8, 2026</div>
+  </div>
 
-<h1>📄 Terms of Service</h1>
+  <div class="intro-box">
+    By using Zimowy Guard on any Discord server, you agree to the terms below. If you do not agree, please discontinue use of the bot.
+  </div>
 
-<p><strong>🤖 Bot:</strong> Zimowy Guard</p>
+  <section>
+    <h2>1️⃣ Nature of the Service</h2>
+    <div class="card">
+      <p class="desc">
+        Zimowy Guard is a Discord bot that combines community engagement features — slash commands, member verification, a riddle/quiz voting system, self-service color roles, and a reputation system — with server protection features, including moderation tools, anti-raid and anti-nuke systems, and server/user blacklisting. The bot operates exclusively within the Discord server(s) on which it is installed.
+      </p>
+    </div>
+  </section>
 
-<h2>⚠️ 1. Acceptance of Terms</h2>
-<p>By using this bot, you agree to comply with these Terms of Service and Discord’s Terms of Service.</p>
+  <section>
+    <h2>2️⃣ Member Verification</h2>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji">✅</span> Clicking the verification button grants you a designated role on the server, used to confirm you have completed the verification process.</li>
+        <li><span class="emoji">⚠️</span> If the verification role has been removed or misconfigured on a given server, verification through the bot may temporarily fail until server staff resolve it.</li>
+      </ul>
+    </div>
+  </section>
 
-<h2>🛡️ 2. Usage Rules</h2>
-<ul>
-<li>🚫 Do not abuse, spam, or exploit the bot</li>
-<li>🚫 Do not attempt to disrupt or overload bot systems</li>
-<li>🚫 Do not use the bot for illegal or harmful activities</li>
-</ul>
+  <section>
+    <h2>3️⃣ Riddles & Quizzes</h2>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji">🧩</span> Each riddle/quiz allows <b>one vote per user</b>. Once submitted, a vote is final and cannot be changed.</li>
+        <li><span class="emoji">📊</span> Aggregated vote counts are displayed publicly and update automatically as users vote.</li>
+        <li><span class="emoji">🔒</span> Voting closes once a riddle is marked as finished by the bot; no further votes are accepted afterward.</li>
+      </ul>
+    </div>
+  </section>
 
-<h2>🔐 3. Moderation & Access</h2>
-<p>The bot owner reserves the right to restrict, suspend, or blacklist users or servers at any time if misuse is detected.</p>
+  <section>
+    <h2>4️⃣ Color Roles & Reputation</h2>
+    <div class="card">
+      <p class="desc">
+        Users may add or remove available color roles from the color-selection menu at any time, for cosmetic purposes only. Color roles carry no permissions beyond the visual display name color. The reputation system (<code>+rep</code> / <code>?rep</code>) lets members award each other points in a designated channel; reputation totals are cosmetic and carry no server permissions.
+      </p>
+    </div>
+  </section>
 
-<h2>⚙️ 4. Service Availability</h2>
-<p>The bot is provided "as is" and may be modified, updated, or discontinued at any time without notice.</p>
+  <section>
+    <h2>5️⃣ Vacation / Leave Mode</h2>
+    <div class="card">
+      <p class="desc">
+        Members or staff may request a temporary "leave" period during which their roles are stored and hidden, and automatically restored once the leave period ends or they end it early. This feature is intended for genuine, temporary absences and may be reversed early by staff if misused.
+      </p>
+    </div>
+  </section>
 
-<h2>📊 5. Data & Privacy</h2>
-<p>Data usage is described in the Privacy Policy. No unnecessary personal data is collected.</p>
+  <section>
+    <h2>6️⃣ Permission-Gated Commands</h2>
+    <div class="card">
+      <p class="desc">
+        Some slash commands require specific Discord permissions within the channel they are used in. If you lack the required permissions, the command will be blocked and you will be notified accordingly.
+      </p>
+    </div>
+  </section>
 
-<h2>📌 6. Liability</h2>
-<p>The bot owner is not responsible for any damages or losses caused by the use of the bot.</p>
+  <section>
+    <h2>🛡️ 7️⃣ Moderation & Server Protection</h2>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji">📜</span> Moderation actions taken by staff (kicks, bans, warns, mutes, deleted messages) may be logged, along with the reason and the staff member responsible, for accountability purposes.</li>
+        <li><span class="emoji">🚨</span> Anti-raid protection may temporarily lock down the server (e.g. slow verification, restrict invites) if an unusually large number of members join in a short period.</li>
+        <li><span class="emoji">🛑</span> Anti-nuke protection automatically responds to suspicious, potentially destructive admin-level actions (such as mass channel/role deletion, unauthorized bot additions, or server icon/emoji changes) by removing dangerous permissions, and — depending on server configuration — may kick or ban the account responsible.</li>
+        <li><span class="emoji">🚫</span> Automated anti-spam detection may act on accounts that post messages at an abnormal rate or in a repetitive/flooding pattern.</li>
+        <li><span class="emoji">⛔</span> The bot owner/staff may add servers or users to an internal blacklist (e.g. to deny partnership requests or restrict access) for rule violations or abuse.</li>
+      </ul>
+      <div class="note">Automated security actions are designed to protect the server and its members. Where a false positive occurs, server staff or the bot owner may reverse the action.</div>
+    </div>
+  </section>
 
-<h2>🔄 7. Changes to Terms</h2>
-<p>These Terms may be updated at any time. Continued use of the bot means acceptance of updated terms.</p>
+  <section>
+    <h2>8️⃣ Rules of Use</h2>
+    <div class="card">
+      <p class="desc" style="margin-bottom:10px;">The following is prohibited:</p>
+      <ul class="plain">
+        <li><span class="emoji">🚫</span> Exploiting bugs or vulnerabilities in the bot to bypass permission checks, security systems, or voting limits</li>
+        <li><span class="emoji">🚫</span> Creating multiple accounts (alt accounts) to vote more than once on the same riddle, or to farm reputation points</li>
+        <li><span class="emoji">🚫</span> Attempting to disrupt, spam, or manipulate the verification, voting, moderation, or anti-raid/anti-nuke systems</li>
+        <li><span class="emoji">🚫</span> Using the bot for illegal or harmful activities, or in violation of Discord's own Terms of Service</li>
+      </ul>
+      <div class="note">Violation of the above rules may result in role removal, vote invalidation, kicking, banning, blacklisting, or other sanctions determined by the administration of the given server or the bot owner.</div>
+    </div>
+  </section>
 
-<div class="footer">
-© 2026 Zimowy Guard • Terms of Service 📄
+  <section>
+    <h2>9️⃣ Moderation & Access</h2>
+    <div class="card">
+      <p class="desc">
+        The bot owner reserves the right to restrict, suspend, or blacklist users or servers at any time if misuse is detected.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔟 Service Availability</h2>
+    <div class="card">
+      <p class="desc">
+        The bot is provided "as is," without any guarantee of uninterrupted operation, and may be modified, updated, or discontinued at any time without notice. We are not liable for downtime, data loss caused by technical failure, or interruptions in feature availability resulting from limitations of the Discord platform.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📌 Liability</h2>
+    <div class="card">
+      <p class="desc">
+        The bot owner is not responsible for any damages or losses caused by the use of the bot, including actions taken by its automated moderation or security systems.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📊 Data & Privacy</h2>
+    <div class="card">
+      <p class="desc">
+        Data usage is described in the <a href="index.html" style="color:var(--accent);">Privacy Policy</a>. No unnecessary personal data is collected.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔄 Changes to These Terms</h2>
+    <div class="card">
+      <p class="desc">
+        These Terms may be updated at any time. Significant changes will be announced on the server. Continued use of the bot after changes take effect constitutes acceptance of those changes.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>✉️ Contact</h2>
+    <div class="card">
+      <p class="desc">
+        For any questions regarding these Terms, please contact server staff through the ticket system.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Zimowy Guard — Discord Bot &nbsp;•&nbsp; Last updated: September 13, 2026
+  </footer>
+
 </div>
-
-</div>
-
 </body>
 </html>

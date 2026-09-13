@@ -125,50 +125,81 @@
     <div class="icon">🔐</div>
     <h1>Privacy Policy</h1>
     <div class="meta">🤖 <b>Bot:</b> Zimowy Guard</div>
+    <div class="meta">🧩 <b>Modules covered:</b> Community &amp; Security Features, Partnership System &amp; Ticket System</div>
     <div class="meta">📅 <b>Effective Date:</b> July 8, 2026</div>
     <div class="meta">🔄 <b>Last Revised:</b> September 13, 2026</div>
   </div>
 
   <div class="intro-box">
-    This Privacy Policy explains what data Zimowy Guard processes on Discord servers, why it is processed, and how long it is retained. Zimowy Guard combines a member engagement toolkit (verification, riddles/quizzes, color roles, reputation, activity leaderboard) with a server protection toolkit (moderation logging, anti-raid, anti-nuke, and blacklist systems).
+    Zimowy Guard now operates as a single bot combining its original community and server-protection features with the previously separate partnership system and ticket system. This Privacy Policy explains what data the bot processes on Discord servers across all modules, why it is processed, and how long it is retained.
   </div>
 
   <section>
     <h2>📋 Data We Collect</h2>
+
+    <h3>Community &amp; Security Module</h3>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji">👤</span> User IDs (members, staff performing moderation or admin actions)</li>
+        <li><span class="emoji">🏠</span> Server (Guild) IDs</li>
+        <li><span class="emoji">💬</span> Channel IDs (reputation channel, guessing-game channel, moderation log channel, sticky-message channels)</li>
+        <li><span class="emoji">🎭</span> Role IDs (verification role, color roles, admin roles, leave/"urlop" role, guessing-game reward roles, birthday role)</li>
+        <li><span class="emoji">🧩</span> Riddle/quiz vote records: which user voted, their choice, and the riddle ID (one vote per user per riddle)</li>
+        <li><span class="emoji">⭐</span> Reputation point totals awarded between members via the <code>+rep</code> / <code>?rep</code> commands</li>
+        <li><span class="emoji">🌴</span> Leave/"urlop" records: the roles held before leave (stored so they can be restored), and the leave start/end timestamps</li>
+        <li><span class="emoji">📜</span> Moderation action logs: action type (kick, ban, warn, mute, message deletion), reason, the staff member responsible, and the target user, for accountability purposes</li>
+        <li><span class="emoji">🚨</span> Anti-raid, anti-nuke, and anti-spam event data: join timestamps, flagged/suspicious admin-level actions, and the accounts involved, used solely to detect and respond to abuse</li>
+        <li><span class="emoji">⛔</span> An internal blacklist maintained by the bot owner/staff (blacklisted user/server IDs and reasons), separate from the mirrored partnership blacklist described below</li>
+        <li><span class="emoji">🎮</span> Guessing-game data: number of guesses, win counts, leaderboard standings, and configured odds</li>
+        <li><span class="emoji">🎂</span> Birthday entries (date submitted by the user) and their approval status</li>
+        <li><span class="emoji">📥</span> Invite-tracking records: which invite code was used and by whom, to attribute new members to the inviter</li>
+      </ul>
+    </div>
+
+    <h3>Partnership Module</h3>
+    <div class="card">
+      <ul class="plain">
+        <li><span class="emoji">👤</span> User IDs (server owners/representatives, realizators, partners)</li>
+        <li><span class="emoji">🏠</span> Server (Guild) IDs, including IDs of partner servers referenced in invite links</li>
+        <li><span class="emoji">💬</span> Channel IDs used for the partnership system and the log channel</li>
+        <li><span class="emoji">🎭</span> Role IDs (realizator role, partner role, leave/"urlop" role, permission checks)</li>
+        <li><span class="emoji">🔗</span> Discord invite links submitted in the designated partnership channel</li>
+        <li><span class="emoji">🤝</span> Partnership records: which realizator handled which partnership, the partner's user ID, the associated invite link, the date, and the reward rate assigned to that partnership</li>
+        <li><span class="emoji">⏱️</span> Norm/quota tracking data for realizators: cycle start time, whether a reminder was already sent, and the count of partnerships completed within the current cycle</li>
+        <li><span class="emoji">🚫</span> A local mirror of a blacklist (blocked server IDs, server names, and block reasons), synced from a separate, independently operated blacklist bot</li>
+        <li><span class="emoji">🎁</span> Completed-partnership counters used to determine when a realizator has reached the threshold for a reward payout</li>
+      </ul>
+    </div>
+
+    <h3>Ticket Module</h3>
     <div class="card">
       <ul class="plain">
         <li><span class="emoji">👤</span> User IDs</li>
-        <li><span class="emoji">🏠</span> Server (Guild) IDs</li>
-        <li><span class="emoji">💬</span> Channel IDs where activity or moderation actions take place</li>
-        <li><span class="emoji">🎭</span> Role IDs (used for permission checks, member verification, self-assigned color roles, and role snapshots used to restore roles after a leave/vacation period)</li>
-        <li><span class="emoji">🧩</span> Riddle/quiz identifiers and the answer option a user selects (A/B/C/D)</li>
-        <li><span class="emoji">📨</span> Message IDs of riddle/quiz posts (used to update the vote count shown in the embed)</li>
-        <li><span class="emoji">🖱️</span> Interaction data (which button or select menu a user clicked, and when)</li>
-        <li><span class="emoji">⭐</span> Reputation point totals, given between users via a text command in a designated channel</li>
-        <li><span class="emoji">📈</span> A daily message count per user, used only to generate a "most active members" leaderboard</li>
-        <li><span class="emoji">🛡️</span> Moderation statistics per staff member (message count, kicks, bans, warns, mutes, deleted-message count, tracked voice time, ticket count, staff rating, and how long someone has held a staff role)</li>
-        <li><span class="emoji">📜</span> A history log of moderation actions (action type, reason, timestamp, and which staff member performed it)</li>
-        <li><span class="emoji">🚨</span> Security-related event data used for anti-raid and anti-nuke protection: timestamps of member joins during a suspected raid, timestamps and types of suspicious admin-level actions (e.g. mass channel/role changes), and temporary records of original server/nickname values changed during an incident (so they can be restored)</li>
-        <li><span class="emoji">🧳</span> Vacation/leave-mode data: which roles a user had before going on leave and when their leave period ends, so roles can be automatically restored</li>
-        <li><span class="emoji">⛔</span> Blacklist records for servers or users found to violate the rules (server/user ID, reason, note, and which staff member added the entry)</li>
+        <li><span class="emoji">💬</span> Channel IDs and channel topics (used to link a ticket channel to the user who opened it)</li>
+        <li><span class="emoji">🎭</span> Role IDs (used for permission checks, ticket access management, the "urlop"/leave role, and the verification role)</li>
+        <li><span class="emoji">📝</span> Full content of messages sent inside ticket channels (see section below)</li>
+        <li><span class="emoji">🕐</span> Timestamps of ticket creation and closure</li>
       </ul>
       <div class="note">
-        The bot does <b>not</b> use the <b>Presence Intent</b> (online/offline status of other users). The bot does use the <b>Message Content Intent</b>, but only to recognize specific text patterns in real time and to run automated spam/security checks (see below) — the text of ordinary messages is never stored, logged, or reviewed by anyone. Interactions (buttons, select menus, slash commands) are processed directly through Discord's interaction system, not by scanning message content.
+        The "urlop"/leave role is shared logic across all modules: while a member holds it, their access to open tickets is restricted and their realizator norm is paused.
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>💬 Use of Message Content</h2>
+    <div class="note">
+      The bot does <b>not</b> use the <b>Presence Intent</b> (online/offline status of other users) — this is not required by, and is not used by, any bot feature across any module. The bot also does not process voice activity.
+    </div>
+
+    <h3>Message Content — What Exactly Is Processed</h3>
     <div class="card">
-      <p class="desc" style="margin-bottom:10px;">Message text is read in real time, in memory only, for the following purposes:</p>
+      <p class="desc" style="margin-bottom:10px;">
+        The bot requires the <b>Message Content Intent</b> and the <b>Server Members Intent</b>. How message content is handled differs by feature:
+      </p>
       <ul class="plain">
-        <li><span class="emoji">➕</span> Recognizing the <code>+rep @user</code> and <code>?rep @user</code> text commands, used to give and check reputation points in a single designated channel</li>
-        <li><span class="emoji">🔗</span> Detecting links posted in specific configured channels, so the bot can keep a pinned informational embed visible at the bottom of the channel</li>
-        <li><span class="emoji">🛠️</span> Recognizing a small set of plain-text maintenance commands, restricted to a few trusted, hardcoded staff user IDs</li>
-        <li><span class="emoji">🚫</span> Automated anti-spam detection, which briefly checks the rate and similarity of recent messages from an account to identify spam/flood behavior</li>
+        <li><span class="emoji">🎮</span> <b>Guessing-game channel:</b> the bot reads submitted messages only to check whether they contain a valid numeric guess and compare it against the target number — the message text itself is not permanently stored, only the resulting win/guess count.</li>
+        <li><span class="emoji">🔗</span> <b>Partnership channel:</b> the bot only extracts the presence/value of a Discord invite link (discord.gg / discord.com/invite) and any mentioned user — it does <b>not</b> permanently store the full text of these messages.</li>
+        <li><span class="emoji">🎫</span> <b>Ticket channels:</b> the bot <b>temporarily stores the full text</b> of every message sent inside a ticket channel — author username, User ID, and timestamp for each — compiled into a transcript when the ticket is closed or the owner leaves the server.</li>
       </ul>
-      <div class="note">No message content is saved to our database. Only the outcome of this processing — a point total, a numeric daily message count, a security flag, or an action taken — is stored, always keyed by Discord user ID.</div>
+      <div class="note">The bot does not read or store message content from any other channel on the server outside of these specific contexts.</div>
     </div>
   </section>
 
@@ -177,19 +208,28 @@
     <div class="card">
       <table>
         <tr><th>Purpose</th><th>Data Used</th></tr>
-        <tr><td>Member verification (assigning the verified role)</td><td>User ID, Role ID</td></tr>
-        <tr><td>Permission-gated slash commands</td><td>User ID, Channel ID, Role/permission data</td></tr>
-        <tr><td>Riddle / quiz voting system</td><td>User ID, riddle ID, selected answer, message ID (to keep the live vote tally accurate and prevent double voting)</td></tr>
-        <tr><td>Self-assigned color roles</td><td>User ID, Role ID</td></tr>
-        <tr><td>Reputation system (<code>+rep</code> / <code>?rep</code>)</td><td>User ID, cumulative point total</td></tr>
-        <tr><td>Daily activity leaderboard</td><td>User ID, daily message count</td></tr>
-        <tr><td>Vacation / leave mode</td><td>User ID, Guild ID, saved role list, end date, hidden channel state</td></tr>
-        <tr><td>Staff moderation statistics &amp; history</td><td>Staff User ID, action counts, action log entries, timestamps</td></tr>
-        <tr><td>Anti-raid protection (mass-join detection, temporary lockdown)</td><td>Join timestamps, Guild ID</td></tr>
-        <tr><td>Anti-nuke protection (detecting and reversing destructive admin actions)</td><td>User ID, action type, timestamp, restored role/name data</td></tr>
-        <tr><td>Anti-spam protection</td><td>User ID, message timing (content is not retained)</td></tr>
-        <tr><td>Server / user blacklist</td><td>Server or User ID, reason, note, staff ID who added the entry</td></tr>
-        <tr><td>Command registration and updates</td><td>Guild ID (used only to register/update slash commands on the server)</td></tr>
+        <tr><td>Member verification (role assignment on completing verification)</td><td>User ID, Role ID</td></tr>
+        <tr><td>Riddle/quiz voting and public result display</td><td>User ID, vote choice, riddle ID</td></tr>
+        <tr><td>Reputation system (<code>+rep</code> / <code>?rep</code>)</td><td>User ID (giver/receiver), point totals, Channel ID</td></tr>
+        <tr><td>Self-service color roles</td><td>User ID, Role ID</td></tr>
+        <tr><td>Vacation/leave ("urlop") mode: storing and restoring roles, pausing ticket access and the realizator norm</td><td>User ID, stored Role IDs, leave period timestamps</td></tr>
+        <tr><td>Moderation logging and staff accountability</td><td>User ID, action type, reason, staff member ID, timestamp</td></tr>
+        <tr><td>Anti-raid, anti-nuke, and anti-spam protection</td><td>User ID, Guild ID, join/action timestamps</td></tr>
+        <tr><td>Internal blacklist management (access restriction, partnership denial)</td><td>User ID / Guild ID, reason</td></tr>
+        <tr><td>"Guess the Number" minigame, reward roles, and leaderboard</td><td>User ID, guess count, win count, Channel ID</td></tr>
+        <tr><td>Birthday announcements and optional temporary role</td><td>User ID, birthday date, approval status</td></tr>
+        <tr><td>Invite tracking (attributing new members to an inviter)</td><td>User ID (inviter/invitee), invite code, Guild ID</td></tr>
+        <tr><td>Registering and tracking partnerships between servers</td><td>User ID, Guild ID, Channel ID, invite link, timestamp</td></tr>
+        <tr><td>Enforcing the realizator activity norm (quota) with automated reminders and role removal</td><td>User ID, Role ID, cycle timestamps, partnership counts</td></tr>
+        <tr><td>Rewarding realizators for completed partnerships: once a set threshold is reached, the realizator can open a payout ticket, and staff manually credit the corresponding virtual points via the ZR Points bot, instead of a monetary payment</td><td>User ID, completed-partnership count, reward rate</td></tr>
+        <tr><td>Blocking partnerships with blacklisted servers</td><td>Guild ID, blacklist mirror data</td></tr>
+        <tr><td>Ending/cleaning up partnerships automatically when a partner leaves a server</td><td>User ID, partnership records, invite link</td></tr>
+        <tr><td>Creating and managing ticket channels</td><td>User ID, Guild ID, Channel ID/topic, Role IDs</td></tr>
+        <tr><td>Assigning ticket access to staff ("claim" / "release")</td><td>User ID, Role IDs, Channel permission overwrites</td></tr>
+        <tr><td>Ticket transcript generation and delivery</td><td>Message content, Author username/ID, timestamps, Channel ID</td></tr>
+        <tr><td>Automatic ticket cleanup when a user leaves the server</td><td>User ID, Channel topic</td></tr>
+        <tr><td>Permission verification for commands and buttons (all modules)</td><td>User ID, Role IDs</td></tr>
+        <tr><td>Moderation / staff oversight</td><td>Log channel entries (moderation actions, blocked partnership attempts, completed/broken partnerships, ticket transcripts)</td></tr>
       </table>
     </div>
   </section>
@@ -197,19 +237,23 @@
   <section>
     <h2>🗄️ Data Storage &amp; Retention</h2>
     <div class="card">
-      <p class="desc" style="margin-bottom:10px;">All data is stored locally in a SQLite database on the bot's own hosting server. Nothing is sent to or stored by any third party.</p>
-      <table>
-        <tr><th>Data</th><th>Retention</th></tr>
-        <tr><td>Riddle/quiz votes</td><td>Deleted once the riddle is closed and results are announced</td></tr>
-        <tr><td>Daily activity message counts</td><td>Reset and cleared every 24 hours after the leaderboard is posted</td></tr>
-        <tr><td>Reputation point totals</td><td>Kept indefinitely as a persistent, cumulative server feature (similar to a level or points system), until deletion is requested</td></tr>
-        <tr><td>Role/verification data</td><td>Kept for as long as the user is a member of the server, until deletion is requested</td></tr>
-        <tr><td>Vacation/leave role snapshots</td><td>Kept only until the leave period ends (or the user leaves the server), then deleted</td></tr>
-        <tr><td>Anti-raid join timestamps / lockdown state</td><td>Short-lived; cleared once the raid window passes or the lockdown is lifted</td></tr>
-        <tr><td>Anti-nuke action records &amp; restored name/role snapshots</td><td>Kept temporarily to allow restoration after an incident, then expire automatically</td></tr>
-        <tr><td>Staff moderation statistics &amp; action history</td><td>Kept indefinitely as an internal accountability record, until deletion is requested</td></tr>
-        <tr><td>Server / user blacklist entries</td><td>Kept indefinitely for server-safety purposes, until removed by staff</td></tr>
-      </table>
+      <p class="desc" style="margin-bottom:10px;">
+        Data is stored locally on the bot's hosting server (SQLite databases) and used exclusively to support the features described in this Policy.
+      </p>
+      <ul class="plain">
+        <li><span class="emoji">🧩</span> Riddle/quiz vote records are retained to display final results and are not reused once a riddle is closed.</li>
+        <li><span class="emoji">⭐</span> Reputation totals are retained indefinitely and may be reset or corrected by staff.</li>
+        <li><span class="emoji">🌴</span> Leave/"urlop" role snapshots are deleted once roles are restored at the end of the leave period.</li>
+        <li><span class="emoji">📜</span> Moderation logs are retained for accountability purposes until removed by staff.</li>
+        <li><span class="emoji">⛔</span> Internal blacklist entries are retained until removed by the bot owner or staff.</li>
+        <li><span class="emoji">🎮</span> Guessing-game win counts and leaderboard entries are retained until reset or corrected by administrators.</li>
+        <li><span class="emoji">🎂</span> Birthday entries are retained until removed by the user or staff.</li>
+        <li><span class="emoji">📥</span> Invite-tracking records are retained for moderation and community-management purposes and may be cleared by staff.</li>
+        <li><span class="emoji">🤝</span> Partnership records are automatically removed once a partnership ends (e.g. when a partner leaves the server).</li>
+        <li><span class="emoji">🚫</span> The mirrored partnership blacklist is fully replaced every time the source blacklist bot broadcasts an update, so it never accumulates stale entries.</li>
+        <li><span class="emoji">🎫</span> Message content collected inside a ticket channel is only compiled into a transcript at the moment the ticket is closed (manually or automatically). The transcript is temporarily written to a log file on the bot's hosting server, sent as an embed with an attached log file, and then <b>immediately deleted from the bot's disk</b>.</li>
+      </ul>
+      <div class="note">The bot does not maintain a persistent database of ticket message content or raw guessing-game message text. Once a ticket transcript has been generated and delivered, the only copies that remain are the ones described in "Data Sharing" below.</div>
     </div>
   </section>
 
@@ -219,16 +263,12 @@
       <ul class="plain">
         <li><span class="emoji"><span class="badge-no">✗</span></span> Data is never sold or shared with third parties</li>
         <li><span class="emoji"><span class="badge-no">✗</span></span> Data is never used for advertising purposes outside the server</li>
-        <li><span class="emoji"><span class="badge-yes">✓</span></span> Aggregated vote counts, reputation totals, and the activity leaderboard are visible to server members, as they are shown publicly in embeds (raw message content is never disclosed or displayed)</li>
-        <li><span class="emoji"><span class="badge-yes">✓</span></span> Moderation logs, staff statistics, and blacklist entries are visible only to server staff with the appropriate permissions</li>
+        <li><span class="emoji"><span class="badge-no">✗</span></span> The bot does not automatically communicate or exchange data with the ZR Points bot — reward points are credited manually by server staff, based on the completed-partnership count shown by this bot, after the realizator opens a payout ticket</li>
+        <li><span class="emoji"><span class="badge-yes">✓</span></span> Blocked-server data used for partnership restrictions is received from a separate, independently operated blacklist bot</li>
+        <li><span class="emoji"><span class="badge-yes">✓</span></span> Ticket transcripts are sent to a dedicated staff log channel on the server, visible to server administrators/staff</li>
+        <li><span class="emoji"><span class="badge-yes">✓</span></span> Ticket transcripts are sent via direct message to the ticket owner and, where applicable, to the staff member who closed the ticket</li>
+        <li><span class="emoji"><span class="badge-yes">✓</span></span> Data may be visible to server administrators as part of standard moderation features (e.g. the moderation log channel, the partnership log channel)</li>
       </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>🔒 Data Security</h2>
-    <div class="card">
-      <p class="desc">Bot credentials, including the Discord bot token, are stored securely using environment variables and are never hardcoded, exposed publicly, or shared.</p>
     </div>
   </section>
 
@@ -245,7 +285,7 @@
     <h2>✋ Your Rights</h2>
     <div class="card">
       <p class="desc">
-        You may request deletion of your data (reputation points, activity counts, recorded votes, role/verification data, vacation records, or moderation-related data tied to your account) at any time by opening a ticket in the <b>#ticket</b> channel on our Discord server. Requests are reviewed by staff and your data is deleted upon verification of your Discord user ID, except where retaining a moderation record is reasonably necessary for server safety and accountability. You may also stop using the bot's features at any time.
+        You may request deletion of your data — including reputation totals, leave/"urlop" history, moderation log entries (where legally permissible), guessing-game or leaderboard entries, birthday information, invite-tracking records, partnership records, norm/cycle history, or previously delivered ticket transcripts (e.g. removal of a message from the staff log channel) — at any time by contacting server staff through the ticket system. You may also stop using the bot at any time — no new data will be actively collected about you going forward.
       </p>
     </div>
   </section>
